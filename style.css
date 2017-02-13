@@ -1,0 +1,45 @@
+body{
+    background-color: #fff;
+    color: #333333;
+    font-size: 100%;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    display: inline;
+    font-size: 1.25vw;
+    font-size: 36px;
+    font-size-adjust: auto;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+    font-size: 1vw;
+    font-size: 35px;
+    font-size-adjust: auto;
+}
+/* links */
+a:link,a:visited{
+    color: orangered;
+    text-decoration: none;
+}
+a:hover{
+    color: darkorange;
+    text-decoration:underline;
+}
+
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    min-height: 100vh;
+    flex-direction: column-reverse;
+}
+
+.content{
+    max-width: 78vw;
+    margin: auto;
+}
