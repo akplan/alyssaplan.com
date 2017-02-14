@@ -1,45 +1,88 @@
 body{
-    background-color: #fff;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fefea;
     color: #333333;
-    font-size: 100%;
+    font-size: 40px;
+    font-size-adjust: auto;
+    
+    /*flexbox*/
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    display: block;
+    margin: 1em;
+    order: 2;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-content: space-between;
+    flex: 0 1 auto;
+    margin:auto;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 h1{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     display: inline;
-    font-size: 1.25vw;
-    font-size: 36px;
+    font-size: 40px;
     font-size-adjust: auto;
 }
 
-p{
-    font-family: 'Open Sans', sans-serif;
+article{
     display: inline;
-    font-size: 1vw;
-    font-size: 35px;
-    font-size-adjust: auto;
 }
 /* links */
 a:link,a:visited{
-    color: orangered;
+    color: #F05644;
     text-decoration: none;
 }
 a:hover{
-    color: darkorange;
+    color: #F4991E;
     text-decoration:underline;
 }
 
-
-.container{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    min-height: 100vh;
-    flex-direction: column-reverse;
+.topline{
+    display:flex;
+    align-self: flex-start;
+    flex-flow: row wrap;
+    font-size: 0.5px;
+    width: 100vw;
+    height:30em;
+    background-color: #C93238;
 }
+
+.navigation{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  
+    font-size: 30px;
+    height: 10vh;
+    width: 100vw;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+.navigation a {
+    display: block;
+    padding: 1.25em;
+}
+
 
 .content{
-    max-width: 78vw;
+    max-width: 75vw;
+    flex-grow: 2;
+    flex-shrink: 0;
     margin: auto;
+    padding: 3em;
+    flex-basis: auto;
+    align-self: stretch;
 }
+
