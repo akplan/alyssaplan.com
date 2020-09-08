@@ -1,0 +1,37 @@
+@import "../styles/colors.scss";
+
+
+  body{
+    transition: background-color 0.3s ease;
+    text-transform: lowercase;
+
+    &.light-mode {
+      background-color: $light-mode-bg;
+      color: $light-mode-text;
+    
+      a {
+          color: $light-mode-link;
+      }; 
+      a:hover {
+        color: $light-mode-text;
+        background-color: $light-mode-link-hover;
+      };
+      a:active {
+        color: $light-mode-link-active;
+      }; 
+    }
+    &.dark-mode {
+      background-color: $dark-mode-bg;
+      color: $dark-mode-text;
+      a {
+        color: $dark-mode-link;
+      }; 
+      a:hover {
+        color: $dark-mode-text;
+        background-color: $dark-mode-link-hover;
+      };
+      a:active {
+        color: $dark-mode-link-active;
+      }; 
+    }
+  }

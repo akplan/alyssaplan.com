@@ -1,0 +1,35 @@
+{
+  "name": "alyssaplan.com",
+  "version": "1.0.0",
+  "description": "alyssa plan's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akplan/alyssaplan.com.git"
+  },
+  "author": "alyssa plan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akplan/alyssaplan.com/issues"
+  },
+  "homepage": "https://github.com/akplan/alyssaplan.com#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "gatsby": "^2.24.54",
+    "gatsby-plugin-fontawesome-css": "^1.0.0",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-typography": "^2.5.10",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19",
+    "use-dark-mode": "^2.3.1"
+  }
+}
