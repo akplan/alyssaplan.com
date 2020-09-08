@@ -1,11 +1,22 @@
 import React from 'react'
-
-const currentYear = new Date().getFullYear();
+import {graphql, useStaticQuery} from 'gatsby'
 
 const Footer = () => {
+    
+    const currentYear = new Date().getFullYear();
+    const data = useStaticQuery(graphql`
+    query{
+        site{
+            siteMetadata{
+                author
+            }
+        }
+    }
+    `)
+
     return (
         <footer>
-            <p>Made with <span role="img" aria-label="magic">🔮</span> by Alyssa Plan © { currentYear } </p>
+            <p>Made with <span role="img" aria-label="magic">🔮</span> by {data.site.siteMetadata.author} © { currentYear } </p>
         </footer>
     )
 }
