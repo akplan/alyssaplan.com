@@ -1,0 +1,44 @@
+@import "../../styles/colors.scss";
+
+header {
+    padding: 1rem 0 3rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: bolder;
+
+    &.light-mode {
+        color: $light-mode-text;
+    }
+
+    &.dark-mode {
+        color: $dark-mode-text;    
+    }
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-item {
+    margin-right: 1.5rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.active-nav-item{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    &.light-mode {
+        text-decoration-color: $light-mode-accent;
+    }
+
+    &.dark-mode {
+        text-decoration-color: $dark-mode-primary-light;    
+    }
+}

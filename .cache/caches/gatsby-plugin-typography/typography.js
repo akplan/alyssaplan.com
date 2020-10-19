@@ -1,0 +1,1 @@
+module.exports = require("D:\\Documents\\GitHub\\alyssaplan.com\\src\\utils\\typography")

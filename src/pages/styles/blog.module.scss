@@ -1,0 +1,53 @@
+@import '../../styles/colors.scss';
+
+.posts {
+    list-style-type: none;
+    margin: 0;   
+}
+
+.post {
+    a{
+        margin: 1rem 0;
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+    }
+
+    
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: .8rem;
+        font-style: italic;
+    }
+
+    &.light-mode {
+        a {
+            background: $light-mode-blog-bg;
+            color: $light-mode-text;
+        }
+        a:hover {
+            background:$light-mode-blog-bg-hover;
+        }
+
+        p {
+            color: $light-mode-text-muted;
+        }
+    }
+    &.dark-mode {
+        a {
+            background: $dark-mode-blog-bg;
+            color: $dark-mode-text;
+        }
+        a:hover
+        {
+            background:$dark-mode-blog-bg-hover;
+        }
+
+        p {
+            color: $dark-mode-text-muted;
+        }
+    }
+}
