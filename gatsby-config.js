@@ -13,7 +13,6 @@ module.exports = {
             }
         },
         'gatsby-plugin-sass',
-        'gatsby-source-fontawesome',
         'gatsby-plugin-fontawesome-css',
         'gatsby-plugin-sharp',
         {
