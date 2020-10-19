@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+button {
+    border: 1px;
+    background: none;
+    padding: 0.5rem ;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.light-mode {
+        color: $light-mode-text;
+    }
+
+
+    &.dark-mode {
+        color: $dark-mode-text;    
+    }
+  }
+
