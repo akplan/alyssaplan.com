@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('D:/Documents/GitHub/alyssaplan.com/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('D:/Documents/GitHub/alyssaplan.com/node_modules/gatsby-plugin-fontawesome-css/gatsby-ssr'),
       options: {"plugins":[]},
     },{

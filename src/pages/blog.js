@@ -1,34 +1,47 @@
 import React from 'react'
-import {useStaticQuery, graphql} from 'gatsby'
+import {useStaticQuery, Link, graphql} from 'gatsby'
 
 import Layout from '../components/layout'
+import blogStyles from './styles/blog.module.scss'
+import useDarkMode from 'use-dark-mode'
+
+import Head from '../components/head'
 
 const Blog = () => {
 
     const data = useStaticQuery(graphql`
     query{
-        allMarkdownRemark {
-          edges{
-            node{
-              frontmatter{
-                title
-                date
-              }
-            }
+      allContentfulBlogPost(
+        sort: {
+          fields:publishedDate,
+          order:DESC
+        }
+      ){
+        edges{
+          node{
+            title
+            slug
+            publishedDate (formatString:"MMMM Do, YYYY")
           }
         }
       }
+    }
     `);
+
+    const darkMode = useDarkMode();
     return(
         <Layout>
+          <Head title="Blog" />
             <h1>Blargh</h1>
-            <ol>
+            <ol className={blogStyles.posts}>
                 {
-                    data.allMarkdownRemark.edges.map((edge) => {
+                    data.allContentfulBlogPost.edges.map((edge) => {
                         return (
-                            <li>
-                                <h2>{edge.node.frontmatter.title}</h2>
-                                <p>{edge.node.frontmatter.date}</p>
+                            <li className={`${blogStyles.post} ${darkMode.value ? blogStyles.darkMode: blogStyles.lightMode}`}>
+                                <Link to={`/blog/${edge.node.slug}`}>
+                                  <h2>{edge.node.title}</h2>
+                                <p>{edge.node.publishedDate}</p>
+                                </Link>
                             </li>
                         );
                 })}
